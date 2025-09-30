@@ -1,0 +1,140 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4CAF50;
+}
+
+h2 {
+  color: #333;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Form Styling */+---
+form {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input {
+  display: block;
+  width: 90%;
+  padding: 8px;
+  margin: 10px auto 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Table Styling */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+table th, table td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Edit and Delete Buttons */
+table tbody td button.editBtn,
+table tbody td button.deleteBtn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+table tbody td button.editBtn {
+  background-color: #007BFF; /* Blue for Edit */
+  margin-right: 10px;
+}
+
+table tbody td button.editBtn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+table tbody td button.deleteBtn {
+  background-color: #FF5733; /* Red for Delete */
+}
+
+table tbody td button.deleteBtn:hover {
+  background-color: #C7001A; /* Darker red on hover */
+}
+
+/* View Buttons */
+button#toggleViewBtn {
+  display: block;
+  background-color: #007BFF;
+  color: rgba(253, 254, 255, 0.947);
+  padding: 10px 20px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50%;
+  text-align: center;
+}
+
+button#toggleViewBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}

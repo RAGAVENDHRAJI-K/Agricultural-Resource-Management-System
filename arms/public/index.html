@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARMS - Farmer & Crop Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Agricultural Resource Management System</h1>
+    
+    <!-- Farmer Form Section 
+    <form id="farmerForm">
+        <h2>Add Farmer</h2>
+        <label for="farmerID">Farmer ID:</label>
+        <input type="text" id="farmerID" required><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="contact">Contact Info:</label>
+        <input type="text" id="contact" required><br>
+
+        <label for="location">Farm Location:</label>
+        <input type="text" id="location" required><br>
+
+        <button type="submit">Add Farmer</button>
+    </form>
+    <h2 id="farmersHeader">Farmers</h2>
+    <button id="toggleViewBtn">View Farmers</button>
+    <table id="farmerTable">
+        <thead>
+            <tr>
+                <th>Farmer ID</th>
+                <th>Name</th>
+                <th>Contact Info</th>
+                <th>Farm Location</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>-->
+    
+    
+    <!-- Farmer Form Section -->
+    <form id="farmerForm">
+        <h2>Add/Update Farmer</h2>
+        <!-- Hidden field for updating farmer -->
+        <input type="hidden" id="hiddenFarmerID">
+        
+        <label for="farmerID">Farmer ID:</label>
+        <input type="text" id="farmerID" required><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="contact">Contact Info:</label>
+        <input type="text" id="contact" required><br>
+
+        <label for="location">Farm Location:</label>
+        <input type="text" id="location" required><br>
+
+        <button type="submit" id="formSubmitBtn">Add Farmer</button>
+    </form>
+
+    <h2 id="farmersHeader">Farmers</h2>
+    <button id="toggleViewBtn">View Farmers</button>
+    <table id="farmerTable">
+        <thead>
+            <tr>
+                <th>Farmer ID</th>
+                <th>Name</th>
+                <th>Contact Info</th>
+                <th>Farm Location</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+   
+
+    <!-- Crop Form Section -->
+    <form id="cropForm">
+        <h2>Add Crop</h2>
+        <label for="cropID">Crop ID:</label>
+        <input type="text" id="cropID" required><br>
+
+        <label for="cropName">Crop Name:</label>
+        <input type="text" id="cropName" required><br>
+
+        <label for="waterRequirements">Water Requirements:</label>
+        <input type="text" id="waterRequirements" required><br>
+
+        <label for="soilType">Soil Type:</label>
+        <input type="text" id="soilType" required><br>
+
+        <label for="fertilizerRequirements">Fertilizer Requirements:</label>
+        <input type="text" id="fertilizerRequirements" required><br>
+
+        <label for="expectedYield">Expected Yield:</label>
+        <input type="text" id="expectedYield" required><br>
+
+        <button type="submit">Add Crop</button>
+    </form>
+
+    
+
+    <!-- Crop Table Section -->
+    <h2 id="cropsHeader">Crops</h2>
+    <button id="toggleCropViewBtn">View Crops</button>
+    <table id="cropTable" style="display:none;">
+        <thead>
+            <tr>
+                <th>Crop ID</th>
+                <th>Crop Name</th>
+                <th>Water Requirements</th>
+                <th>Soil Type</th>
+                <th>Fertilizer Requirements</th>
+                <th>Expected Yield</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+<!-- Weather Section -->
+<form id="weatherForm">
+    <h2>Add Weather Data</h2>
+    <label for="weatherID">Weather ID:</label>
+    <input type="text" id="weatherID" required><br>
+    <label for="date">Date:</label>
+    <input type="date" id="date" required><br>
+    <label for="temperature">Temperature:</label>
+    <input type="text" id="temperature" required><br>
+    <label for="precipitation">Precipitation:</label>
+    <input type="text" id="precipitation" required><br>
+    <label for="soilConditions">Soil Conditions:</label>
+    <input type="text" id="soilConditions" required><br>
+    <button type="submit">Add Weather</button>
+</form>
+<button id="toggleWeatherViewBtn">View Weather Data</button>
+<h2 id="weatherHeader">Weather Data</h2>
+<table id="weatherTable">
+    <thead>
+        <tr>
+            <th>Weather ID</th>
+            <th>Date</th>
+            <th>Temperature</th>
+            <th>Precipitation</th>
+            <th>Soil Conditions</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+      <!-- Market Price Section -->
+<form id="marketPriceForm">
+    <h2>Add Market Price</h2>
+    <label for="marketPriceID">Market Price ID:</label>
+    <input type="text" id="marketPriceID" required><br>
+    <label for="cropID">Crop ID:</label>
+    <input type="text" id="cropID" autocomplete="off" required>
+<br>
+    <label for="marketDate">Date:</label>
+    <input type="date" id="marketDate" required><br>
+    <label for="price">Price:</label>
+    <input type="text" id="price" required><br>
+    <button type="submit">Add Market Price</button>
+</form>
+<button id="toggleMarketPriceViewBtn">View Market Price Data</button>
+<h2 id="marketPriceHeader">Market Price Data</h2>
+<table id="marketPriceTable">
+    <thead>
+        <tr>
+            <th>Market Price ID</th>
+            <th>Crop ID</th>
+            <th>Date</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+
+<!-- Inventory Section -->
+<form id="inventoryForm">
+    <h2>Add Inventory</h2>
+    <label for="inventoryID">Inventory ID:</label>
+    <input type="text" id="inventoryID" required><br>
+    <label for="resourceID">Resource ID:</label>
+    <input type="text" id="resourceID" required><br>
+    <label for="quantity">Quantity:</label>
+    <input type="text" id="quantity" required><br>
+    <label for="unit">Unit:</label>
+    <input type="text" id="unit" required><br>
+    <button type="submit">Add Inventory</button>
+</form>
+<button id="toggleInventoryViewBtn">View Inventory Data</button>
+<h2 id="inventoryHeader">Inventory Data</h2>
+<table id="inventoryTable">
+    <thead>
+        <tr>
+            <th>Inventory ID</th>
+            <th>Resource ID</th>
+            <th>Quantity</th>
+            <th>Unit</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<!-- Resource Section -->
+<form id="resourceForm">
+    <h2>Add Resource</h2>
+    <label for="resourceID">Resource ID:</label>
+    <input type="text" id="resourceID" required><br>
+    <label for="resourceName">Resource Name:</label>
+    <input type="text" id="resourceName" required><br>
+    <label for="type">Type (Fertilizer, Seeds, Equipment):</label>
+    <input type="text" id="type" required><br>
+    <button type="submit">Add Resource</button>
+</form>
+<button id="toggleResourceViewBtn">View Resource Data</button>
+<h2 id="resourceHeader">Resource Data</h2>
+<table id="resourceTable">
+    <thead>
+        <tr>
+            <th>Resource ID</th>
+            <th>Resource Name</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<form id="farmerCropForm">
+    <h2>Add Farmer Crop</h2>
+    <label for="farmerID">Farmer ID:</label>
+    <input type="text" id="farmerID" required><br>
+
+    <label for="cropID">Crop ID:</label>
+    <input type="text" id="cropID" required><br>
+
+    <label for="plantingDate">Planting Date:</label>
+    <input type="date" id="plantingDate" required><br>
+
+    <label for="harvestDate">Harvest Date:</label>
+    <input type="date" id="harvestDate" required><br>
+
+    <label for="yield">Yield:</label>
+    <input type="text" id="yield" required><br>
+
+    <button type="submit">Add Farmer Crop</button>
+</form>
+
+<button id="toggleFarmerCropViewBtn">View Farmer Crop Data</button>
+<h2 id="farmerCropHeader">Farmer Crop Data</h2>
+<table id="farmerCropTable">
+    <thead>
+        <tr>
+            <th>Farmer ID</th>
+            <th>Crop ID</th>
+            <th>Planting Date</th>
+            <th>Harvest Date</th>
+            <th>Yield</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
